@@ -44,60 +44,60 @@ def get_positive_float(prompt):
 
 def grams_to_mg():
     while True:
-        grams = get_positive_float("Enter grams: ")
-        print(f"Formula: {grams} g * 1000")
+        grams = get_positive_float("\nEnter grams: ")
+        print(f"\nFormula: {grams} g * 1000")
         mg = grams * 1000
-        print(f"{grams} g = {mg} mg")
+        print(f"Result: {grams} g = {mg} mg")
         
         if not repeatConv():
             break
 
 def mg_to_grams():
     while True:
-        mg = get_positive_float("Enter milligrams: ")
-        print(f"Formula: {mg} mg / 1000")
+        mg = get_positive_float("\nEnter milligrams: ")
+        print(f"\nFormula: {mg} mg / 1000")
         grams = mg / 1000
-        print(f"{mg} mg = {grams:.2f} g")
+        print(f"Result: {mg} mg = {grams:.2f} g")
         
         if not repeatConv():
             break
 
 def mg_to_mc():
     while True:
-        mg = get_positive_float("Enter milligrams: ")
-        print(f"Formula: {mg} mg * 1000")
+        mg = get_positive_float("\nEnter milligrams: ")
+        print(f"\nFormula: {mg} mg * 1000")
         mcg = mg * 1000
-        print(f"{mg} mg = {mcg} mcg")
+        print(f"Result: {mg} mg = {mcg} mcg")
         
         if not repeatConv():
             break
 
 def mc_to_mg():
     while True:
-        mcg = get_positive_float("Enter micrograms: ")
-        print(f"Formula: {mcg} mcg / 1000")
+        mcg = get_positive_float("\nEnter micrograms: ")
+        print(f"\nFormula: {mcg} mcg / 1000")
         mg = mcg / 1000
-        print(f"{mcg} mcg = {mg:.2f} mg")
+        print(f"Result: {mcg} mcg = {mg:.2f} mg")
         
         if not repeatConv():
             break
 
 def grams_to_mc():
     while True:
-        grams = get_positive_float("Enter grams: ")
-        print(f"Formula: {grams} g * 1000000")
+        grams = get_positive_float("\nEnter grams: ")
+        print(f"\nFormula: {grams} g * 1000000")
         mcg = grams * 1000000
-        print(f"{grams} g = {mcg} mcg")
+        print(f"Result: {grams} g = {mcg} mcg")
         
         if not repeatConv():
             break
 
 def mc_to_grams():
     while True:
-        mcg = get_positive_float("Enter micrograms: ")
-        print(f"Formula: {mcg} mcg / 1000000")
+        mcg = get_positive_float("\nEnter micrograms: ")
+        print(f"\nFormula: {mcg} mcg / 1000000")
         grams = mcg / 1000000
-        print(f"{mcg} mcg = {grams:.2f} g")
+        print(f"Result: {mcg} mcg = {grams:.2f} g")
         
         if not repeatConv():
             break

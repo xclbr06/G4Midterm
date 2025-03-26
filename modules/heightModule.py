@@ -31,79 +31,83 @@ def heightMenu():
         else:
             print("Invalid input! Please enter a number between 1-8.")
 
-def get_positive_float(prompt):
+def get_positive_float(prompt, is_inches=False):
     while True:
         try:
             value = float(input(prompt))
             if value < 0:
                 print("Invalid input! Height cannot be a negative input.")
+                if is_inches:
+                    print()  # Add a newline only for inches
             else:
                 return value
         except ValueError:
             print("Invalid input! Enter numerical values.")
+            if is_inches:
+                print()  # Add a newline only for inches
 
 def feet_inches_to_cm():
     while True:
-        feet = get_positive_float("Enter feet: ")
-        inches = get_positive_float("Enter inches: ")
-        print(f"Formula: ({feet} feet * 30.48) + ({inches} inches * 2.54)")
+        feet = get_positive_float("\nEnter feet: ")
+        inches = get_positive_float("Enter inches: ", is_inches=True)
+        print(f"\nFormula: ({feet} feet * 30.48) + ({inches} inches * 2.54)")
         cm = (feet * 30.48) + (inches * 2.54)
-        print(f"{feet} feet {inches} inches = {cm:.2f} cm")
+        print(f"Result: {feet} feet & {inches} inches = {cm:.2f} cm")
         
         if not repeatConv():
             break
 
 def cm_to_feet_inches():
     while True:
-        cm = get_positive_float("Enter centimeters: ")
-        print(f"Formula: {cm} cm / 2.54 = total inches")
+        cm = get_positive_float("\nEnter centimeters: ")
+        print(f"\nFormula: {cm} cm / 2.54 = total inches")
         totalInches = cm / 2.54
         feet = int(totalInches // 12)
         inches = totalInches % 12
-        print(f"{cm} cm = {feet} feet {inches:.2f} inches")
+        print(f"Result: {cm} cm = {feet} feet & {inches:.2f} inches")
         
         if not repeatConv():
             break
 
 def cm_to_m():
     while True:
-        cm = get_positive_float("Enter centimeters: ")
-        print(f"Formula: {cm} cm / 100")
+        cm = get_positive_float("\nEnter centimeters: ")
+        print(f"\nFormula: {cm} cm / 100")
         meters = cm / 100
-        print(f"{cm} cm = {meters:.2f} meters")
+        print(f"Result: {cm} cm = {meters:.2f} meters")
         
         if not repeatConv():
             break
 
 def m_to_cm():
     while True:
-        meters = get_positive_float("Enter meters: ")
-        print(f"Formula: {meters} meters * 100")
+        meters = get_positive_float("\nEnter meters: ")
+        print(f"\nFormula: {meters} meters * 100")
         cm = meters * 100
-        print(f"{meters} meters = {cm:.2f} cm")
+        print(f"Result: {meters} meters = {cm:.2f} cm")
         
         if not repeatConv():
             break
 
 def feet_inches_to_m():
     while True:
-        feet = get_positive_float("Enter feet: ")
-        inches = get_positive_float("Enter inches: ")
-        print(f"Formula: (({feet} feet * 12) + {inches} inches) * 0.0254")
+        feet = get_positive_float("\nEnter feet: ")
+        inches = get_positive_float("Enter inches: ", is_inches=True)
+        print(f"\nFormula: (({feet} feet * 12) + {inches} inches) * 0.0254")
         meters = ((feet * 12) + inches) * 0.0254
-        print(f"{feet} feet {inches} inches = {meters:.2f} meters")
+        print(f"Result: {feet} feet & {inches} inches = {meters:.2f} meters")
         
         if not repeatConv():
             break
 
 def m_to_feet_inches():
     while True:
-        meters = get_positive_float("Enter meters: ")
-        print(f"Formula: {meters} meters / 0.0254 = total inches")
+        meters = get_positive_float("\nEnter meters: ")
+        print(f"\nFormula: {meters} meters / 0.0254 = total inches")
         totalInches = meters / 0.0254
         feet = int(totalInches // 12)
         inches = totalInches % 12
-        print(f"{meters} meters = {feet} feet {inches:.2f} inches")
+        print(f"Result: {meters} meters = {feet} feet & {inches:.2f} inches")
         
         if not repeatConv():
             break

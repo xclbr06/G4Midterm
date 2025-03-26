@@ -1,5 +1,5 @@
 def weightMenu():
-    conversion_functions = {
+    conversionFunc = {
         '1': kg_to_pounds,
         '2': pounds_to_kg,
         '3': grams_to_ounces,
@@ -21,8 +21,8 @@ def weightMenu():
         
         choice = input("\nEnter your choice: ")
         
-        if choice in conversion_functions:
-            conversion_functions[choice]()
+        if choice in conversionFunc:
+            conversionFunc[choice]()
         elif choice == '7':
             break
         elif choice == '8':
@@ -44,60 +44,60 @@ def get_positive_float(prompt):
 
 def kg_to_pounds():
     while True:
-        kg = get_positive_float("Enter kilograms: ")
-        print(f"Formula: {kg} kg * 2.20462")
+        kg = get_positive_float("\nEnter kilograms: ")
+        print(f"\nFormula: {kg} kg * 2.20462")
         pounds = kg * 2.20462
-        print(f"{kg} kg = {pounds:.2f} lbs")
+        print(f"Result: {kg} kg = {pounds:.2f} pounds")
         
         if not repeatConv():
             break
 
 def pounds_to_kg():
     while True:
-        pounds = get_positive_float("Enter pounds: ")
-        print(f"Formula: {pounds} lbs / 2.20462")
+        pounds = get_positive_float("\nEnter pounds: ")
+        print(f"\nFormula: {pounds} pounds / 2.20462")
         kg = pounds / 2.20462
-        print(f"{pounds} lbs = {kg:.2f} kg")
+        print(f"Result: {pounds} pounds = {kg:.2f} kg")
         
         if not repeatConv():
             break
 
 def grams_to_ounces():
     while True:
-        grams = get_positive_float("Enter grams: ")
-        print(f"Formula: {grams} g * 0.035274")
-        ounces = grams * 0.035274
-        print(f"{grams} g = {ounces:.2f} oz")
+        grams = get_positive_float("\nEnter grams: ")
+        print(f"\nFormula: {grams} grams / 28.3495")
+        ounces = grams / 28.3495
+        print(f"Result: {grams} grams = {ounces:.2f} ounces")
         
         if not repeatConv():
             break
 
 def ounces_to_grams():
     while True:
-        ounces = get_positive_float("Enter ounces: ")
-        print(f"Formula: {ounces} oz / 0.035274")
-        grams = ounces / 0.035274
-        print(f"{ounces} oz = {grams:.2f} g")
+        ounces = get_positive_float("\nEnter ounces: ")
+        print(f"\nFormula: {ounces} ounces * 28.3495")
+        grams = ounces * 28.3495
+        print(f"Result: {ounces} ounces = {grams:.2f} grams")
         
         if not repeatConv():
             break
 
 def kg_to_grams():
     while True:
-        kg = get_positive_float("Enter kilograms: ")
-        print(f"Formula: {kg} kg * 1000")
+        kg = get_positive_float("\nEnter kilograms: ")
+        print(f"\nFormula: {kg} kg * 1000")
         grams = kg * 1000
-        print(f"{kg} kg = {grams} g")
+        print(f"Result: {kg} kg = {grams:.2f} grams")
         
         if not repeatConv():
             break
 
 def grams_to_kg():
     while True:
-        grams = get_positive_float("Enter grams: ")
-        print(f"Formula: {grams} g / 1000")
+        grams = get_positive_float("\nEnter grams: ")
+        print(f"\nFormula: {grams} grams / 1000")
         kg = grams / 1000
-        print(f"{grams} g = {kg:.2f} kg")
+        print(f"Result: {grams} grams = {kg:.2f} kg")
         
         if not repeatConv():
             break
