@@ -25,55 +25,55 @@ def tempbpMenu():
             print("\nExiting program. Goodbye and Have a Nice Day!")
             exit()
         else:
-            print("Invalid input! Please enter a number between 1-6.\n")
+            print("Invalid input! Please enter a number between 1-6.")
 
 def get_positive_float(prompt):
     while True:
         try:
             value = float(input(prompt))
             if value < 0:
-                print("Invalid input! Value cannot be a negative input.\n")
+                print("Invalid input! Value cannot be a negative input.")
             else:
                 return value
         except ValueError:
-            print("Invalid input! Enter numerical values.\n")
+            print("Invalid input! Enter numerical values.")
 
 def celsius_to_fahrenheit():
     while True:
-        celsius = get_positive_float("Enter Celsius: ")
-        print(f"Formula: ({celsius} °C * 9/5) + 32")
+        celsius = get_positive_float("\nEnter Celsius: ")
+        print(f"\nFormula: ({celsius} °C * 9/5) + 32")
         fahrenheit = (celsius * 9/5) + 32
-        print(f"{celsius} °C = {fahrenheit:.2f} °F")
+        print(f"Result: {celsius} °C = {fahrenheit:.2f} °F")
         
         if not repeatConv():
             break
 
 def fahrenheit_to_celsius():
     while True:
-        fahrenheit = get_positive_float("Enter Fahrenheit: ")
-        print(f"Formula: ({fahrenheit} °F - 32) * 5/9")
+        fahrenheit = get_positive_float("\nEnter Fahrenheit: ")
+        print(f"\nFormula: ({fahrenheit} °F - 32) * 5/9")
         celsius = (fahrenheit - 32) * 5/9
-        print(f"{fahrenheit} °F = {celsius:.2f} °C")
+        print(f"Result: {fahrenheit} °F = {celsius:.2f} °C")
         
         if not repeatConv():
             break
 
 def mmhg_to_pascal():
     while True:
-        mmhg = get_positive_float("Enter mmHg: ")
-        print(f"Formula: {mmhg} mmHg * 133.322")
+        mmhg = get_positive_float("\nEnter mmHg: ")
+        print(f"\nFormula: {mmhg} mmHg * 133.322")
         pascal = mmhg * 133.322
-        print(f"{mmhg} mmHg = {pascal:.2f} Pa")
+        print(f"Result: {mmhg} mmHg = {pascal:.2f} Pa")
         
         if not repeatConv():
             break
 
 def pascal_to_mmhg():
     while True:
-        pascal = get_positive_float("Enter Pascal: ")
-        print(f"Formula: {pascal} Pa / 133.322")
+        pascal = get_positive_float("\nEnter Pascal: ")
+        print(f"\nFormula: {pascal} Pa / 133.322")
         mmhg = pascal / 133.322
-        print(f"{pascal} Pa = {mmhg:.2f} mmHg")
+        print(f"Result: {pascal} Pa = {mmhg:.2f} mmHg")
         
         if not repeatConv():
             break
@@ -94,4 +94,4 @@ def repeatConv():
             print("\nExiting program. Goodbye and Have a Nice Day!")
             exit()
         else:
-            print("Invalid input! Please enter 'y', 'n' or 'e'.\n")
+            print("Invalid input! Please enter 'y', 'n' or 'e'.")
